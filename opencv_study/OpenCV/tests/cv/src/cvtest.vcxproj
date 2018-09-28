@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug64 Itanium|Win32">
+      <Configuration>Debug64 Itanium</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug64|Win32">
+      <Configuration>Debug64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release64 Itanium|Win32">
+      <Configuration>Release64 Itanium</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release64|Win32">
+      <Configuration>Release64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64 Itanium|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release64 Itanium|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+    <OutDir>.\..\..\..\_temp\cvtest_Rls64\</OutDir>
+    <IntDir>.\..\..\..\_temp\cvtest_Rls64\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\..\..\..\_temp\cvtest_Rls\</OutDir>
+    <IntDir>.\..\..\..\_temp\cvtest_Rls\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'">
+    <OutDir>.\..\..\..\_temp\cvtest_DbgI7\</OutDir>
+    <IntDir>.\..\..\..\_temp\cvtest_DbgI7\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+    <OutDir>.\..\..\..\_temp\cvtest_Dbg64\</OutDir>
+    <IntDir>.\..\..\..\_temp\cvtest_Dbg64\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release64 Itanium|Win32'">
+    <OutDir>.\..\..\..\_temp\cvtest_RlsI7\</OutDir>
+    <IntDir>.\..\..\..\_temp\cvtest_RlsI7\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\..\..\..\_temp\cvtest_Dbg\</OutDir>
+    <IntDir>.\..\..\..\_temp\cvtest_Dbg\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalIncludeDirectories>.;..\..\cxts;..\..\..\cxcore\include;..\..\..\cv\include;..\..\..\cvaux\include;..\..\..\otherlibs\highgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32;WIN64;EM64T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\..\..\_temp\cvtest_Rls64\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\..\..\_temp\cvtest_Rls64\cvtest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cvtest.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\..\..\_temp\cvtest_Rls64\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\_temp\cvtest_Rls64\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\..\..\..\_temp\cvtest_Rls64\cvtest.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\_temp\cvtest_Rls64\cvtest.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libmmd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>..\..\..\bin\cvtest_64.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cv_64.lib;cvaux_64.lib;cxcore_64.lib;highgui_64.lib;cxts_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /machine:AMD64</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <AdditionalIncludeDirectories>.;..\..\cxts;..\..\..\cxcore\include;..\..\..\cv\include;..\..\..\cvaux\include;..\..\..\otherlibs\highgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\..\..\_temp\cvtest_Rls\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\..\..\_temp\cvtest_Rls\cvtest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cvtest.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\..\..\_temp\cvtest_Rls\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\_temp\cvtest_Rls\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\..\..\..\_temp\cvtest_Rls\cvtest.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\_temp\cvtest_Rls\cvtest.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libmmd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>..\..\..\bin\cvtest.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cv.lib;cvaux.lib;cxcore.lib;highgui.lib;cxts.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>.;..\..\cxts;..\..\..\cxcore\include;..\..\..\cv\include;..\..\..\cvaux\include;..\..\..\otherlibs\highgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CONSOLE;_DEBUG;WIN32;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\..\..\_temp\cvtest_DbgI7\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\..\..\_temp\cvtest_DbgI7\cvtest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cvtest.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\..\..\_temp\cvtest_DbgI7\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\_temp\cvtest_DbgI7\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Qwd167 </AdditionalOptions>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\..\..\..\_temp\cvtest_DbgI7\cvtest.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\_temp\cvtest_DbgI7\cvtest.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>..\..\..\bin\cvtestd_i7.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cvd_i7.lib;cvauxd_i7.lib;cxcored_i7.lib;highguid_i7.lib;cxtsd_i7.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /machine:IA64</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>.;..\..\cxts;..\..\..\cxcore\include;..\..\..\cv\include;..\..\..\cvaux\include;..\..\..\otherlibs\highgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN32;WIN64;EM64T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\..\..\_temp\cvtest_Dbg64\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\..\..\_temp\cvtest_Dbg64\cvtest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cvtest.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\..\..\_temp\cvtest_Dbg64\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\_temp\cvtest_Dbg64\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\..\..\..\_temp\cvtest_Dbg64\cvtest.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\_temp\cvtest_Dbg64\cvtest.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>libmmdd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>..\..\..\bin\cvtestd_64.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cvd_64.lib;cvauxd_64.lib;cxcored_64.lib;highguid_64.lib;cxtsd_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /machine:AMD64</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release64 Itanium|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <AdditionalIncludeDirectories>.;..\..\cxts;..\..\..\cxcore\include;..\..\..\cv\include;..\..\..\cvaux\include;..\..\..\otherlibs\highgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CONSOLE;NDEBUG;WIN32;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\..\..\_temp\cvtest_RlsI7\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\..\..\_temp\cvtest_RlsI7\cvtest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cvtest.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\..\..\_temp\cvtest_RlsI7\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\_temp\cvtest_RlsI7\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\..\..\..\_temp\cvtest_RlsI7\cvtest.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\_temp\cvtest_RlsI7\cvtest.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>..\..\..\bin\cvtest_i7.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cv_i7.lib;cvaux_i7.lib;cxcore_i7.lib;highgui_i7.lib;cxts_i7.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /machine:IA64</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>.;..\..\cxts;..\..\..\cxcore\include;..\..\..\cv\include;..\..\..\cvaux\include;..\..\..\otherlibs\highgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\..\..\..\_temp\cvtest_Dbg\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\..\..\..\_temp\cvtest_Dbg\cvtest.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cvtest.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\..\..\..\_temp\cvtest_Dbg\</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\_temp\cvtest_Dbg\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\..\..\..\_temp\cvtest_Dbg\cvtest.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\_temp\cvtest_Dbg\cvtest.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libmmdd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>..\..\..\bin\cvtestd.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cvd.lib;cvauxd.lib;cxcored.lib;highguid.lib;cxtsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aaccum.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aadaptthresh.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aapproxpoly.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acameracalibration.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acamshift.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acanny.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="achesscorners.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acolor.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acondens.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acontours.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acontoursmatch.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aconvhull.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="acreatecontourtree.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="adistancetransform.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aeigenobjects.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aemd.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="afilter.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="afloodfill.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="afundam.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ahistograms.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="ahoughtransform.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aimage.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aimgwarp.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="akalman.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="akmeans.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="amatchcontourtrees.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="amoments.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="amotiontemplates.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="amotseg.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aoptflowhs.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aoptflowlk.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aoptflowpyrlk.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="aposit.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="apyrsegmentation.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="asnakes.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="asubdivisions.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="atemplmatch.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="athresh.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="cvtest.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release64|Win32'">cvtest.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cvtest.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'">cvtest.h</PrecompiledHeaderFile>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'">cvtest.h</PrecompiledHeaderFile>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release64 Itanium|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release64 Itanium|Win32'">cvtest.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cvtest.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="tsysa.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64 Itanium|Win32'"> /Qwd167   /Qwd167 </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug64|Win32'"> /Wp64   /Wp64 </AdditionalOptions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cvtest.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

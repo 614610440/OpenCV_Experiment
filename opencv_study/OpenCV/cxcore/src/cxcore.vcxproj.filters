@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{a4b4acfd-7443-46cc-b111-2893fd18ad80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{045726a4-3ef6-4fca-8a9d-f733a8d6162d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\External">
+      <UniqueIdentifier>{3df0021e-0bb2-48b2-bb36-0f843e3220cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\Internal">
+      <UniqueIdentifier>{8dd38ac8-02f5-471b-9604-904c5456fa77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cxalloc.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxarithm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxarray.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxcmp.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxconvert.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxcopy.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxdatastructs.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxdrawing.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxdxt.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxerror.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cximage.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxjacobieigens.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxlogic.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxlut.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxmathfuncs.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxmatmul.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxmatrix.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxmean.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxmeansdv.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxminmaxloc.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxnorm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxouttext.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxpersistence.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxprecomp.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxrand.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxsumpixels.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxsvd.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxswitcher.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxtables.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="cxutils.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="cxcore.rc">
+      <Filter>Src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Include\cxcore.h">
+      <Filter>Include\External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cxcore.hpp">
+      <Filter>Include\External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cxerror.h">
+      <Filter>Include\External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cxmisc.h">
+      <Filter>Include\External</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cxtypes.h">
+      <Filter>Include\External</Filter>
+    </ClInclude>
+    <ClInclude Include="_cxcore.h">
+      <Filter>Include\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="_cxipp.h">
+      <Filter>Include\Internal</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

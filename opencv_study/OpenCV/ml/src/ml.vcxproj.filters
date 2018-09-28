@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{92d1fe97-a725-4fea-b91d-401271596e95}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{2734a41c-dce4-43e9-bfb8-1d251bfc6655}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Include\Internal">
+      <UniqueIdentifier>{d240a8b5-e498-4ee5-b38d-d8bb6fe407d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include\External">
+      <UniqueIdentifier>{f084cb36-a55f-48fb-a06c-6c1bd26b6c37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ml.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="ml_inner_functions.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlann_mlp.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlboost.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlcnn.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlem.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlestimate.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlknearest.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlnbayes.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlrtrees.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mlsvm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mltestset.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="mltree.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ml.rc">
+      <Filter>Src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_ml.h">
+      <Filter>Include\Internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ml.h">
+      <Filter>Include\External</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
