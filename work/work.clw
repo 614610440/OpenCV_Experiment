@@ -32,7 +32,7 @@ Type=0
 HeaderFile=workDoc.h
 ImplementationFile=workDoc.cpp
 Filter=N
-LastObject=CWorkDoc
+LastObject=SOBEL_BOARD2
 BaseClass=CDocument
 VirtualFilter=DC
 
@@ -49,7 +49,7 @@ Type=0
 HeaderFile=MainFrm.h
 ImplementationFile=MainFrm.cpp
 Filter=T
-LastObject=SEFMENTALPROVESS1
+LastObject=SALTPEPPERNOISE
 BaseClass=CFrameWnd
 VirtualFilter=fWC
 
@@ -75,8 +75,18 @@ Control4=IDOK,button,1342373889
 [MNU:IDR_MAINFRAME]
 Type=1
 Class=CMainFrame
-Command1=SEFMENTALPROVESS1
-CommandCount=1
+Command1=HIS_H
+Command2=HSI_S
+Command3=HSI_I
+Command4=SOBEL1
+Command5=SOBEL2
+Command6=LAPLACE_BOARD1
+Command7=LAPLACE_BOARD2
+Command8=SOBEL_BOARD1
+Command9=SOBEL_BOARD2
+Command10=GAUSSIANNOISE
+Command11=SALTPEPPERNOISE
+CommandCount=11
 
 [ACL:IDR_MAINFRAME]
 Type=1

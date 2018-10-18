@@ -163,6 +163,16 @@ BEGIN
             MFS_ENABLED
             MENUITEM "B",                           32782,MFT_STRING,
             MFS_ENABLED
+            POPUP "HSI",                            65535,MFT_STRING,
+            MFS_ENABLED
+            BEGIN
+                MENUITEM "H",                           HIS_H,MFT_STRING,
+                MFS_ENABLED
+                MENUITEM "S",                           HSI_S,MFT_STRING,
+                MFS_ENABLED
+                MENUITEM "I",                           HSI_I,MFT_STRING,
+                MFS_ENABLED
+            END
         END
         POPUP "平滑处理",                       65535,MFT_STRING,MFS_ENABLED
         BEGIN
@@ -176,8 +186,8 @@ BEGIN
             POPUP "分段函数",                       65535,MFT_STRING,
             MFS_ENABLED
             BEGIN
-                MENUITEM "test",                        SEFMENTALPROVESS1,
-                MFT_STRING,MFS_CHECKED
+                MENUITEM "test",                        32799,MFT_STRING,
+                MFS_CHECKED
             END
         END
         POPUP "图像融合",                       65535,MFT_STRING,MFS_ENABLED
@@ -202,6 +212,28 @@ BEGIN
             MFS_ENABLED
             MENUITEM "拉普拉斯算子(-1)",            32796,MFT_STRING,
             MFS_ENABLED
+            MENUITEM "sobel算子1",                  SOBEL1,MFT_STRING,
+            MFS_ENABLED
+            MENUITEM "sobel算子2",                  SOBEL2,MFT_STRING,
+            MFS_ENABLED
+        END
+        POPUP "边缘提取",                       65535,MFT_STRING,MFS_ENABLED
+        BEGIN
+            MENUITEM "拉普拉斯算子(1)",             LAPLACE_BOARD1,
+            MFT_STRING,MFS_ENABLED
+            MENUITEM "拉普拉斯算子(-1)",            LAPLACE_BOARD2,
+            MFT_STRING,MFS_ENABLED
+            MENUITEM "sobel算子1",                  SOBEL_BOARD1,MFT_STRING,
+            MFS_ENABLED
+            MENUITEM "sobel算子2",                  SOBEL_BOARD2,MFT_STRING,
+            MFS_ENABLED
+        END
+        POPUP "噪声",                           65535,MFT_STRING,MFS_ENABLED
+        BEGIN
+            MENUITEM "高斯噪声",                    GAUSSIANNOISE,MFT_STRING,
+            MFS_ENABLED
+            MENUITEM "椒盐噪声",                    SALTPEPPERNOISE,
+            MFT_STRING,MFS_ENABLED
         END
     END
 END

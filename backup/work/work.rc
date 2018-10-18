@@ -163,11 +163,23 @@ BEGIN
             MFS_ENABLED
             MENUITEM "B",                           32782,MFT_STRING,
             MFS_ENABLED
+            POPUP "HIS",                            65535,MFT_STRING,
+            MFS_ENABLED
+            BEGIN
+                MENUITEM "H",                           HIS_H,MFT_STRING,
+                MFS_ENABLED
+                MENUITEM "I",                           HIS_I,MFT_STRING,
+                MFS_ENABLED
+                MENUITEM "S",                           HIS_S,MFT_STRING,
+                MFS_ENABLED
+            END
         END
         POPUP "平滑处理",                       65535,MFT_STRING,MFS_ENABLED
         BEGIN
-            MENUITEM "平滑均值滤波",                32785,MFT_STRING,
-            MFS_ENABLED
+            MENUITEM "平滑均值滤波",                AVERAGERFILTERING3,
+            MFT_STRING,MFS_ENABLED
+            MENUITEM "平滑滤波7",                   AVERAGEFILTERING7,
+            MFT_STRING,MFS_ENABLED
         END
         POPUP "高级图像处理",                   65535,MFT_STRING,MFS_ENABLED
         BEGIN
@@ -193,7 +205,9 @@ BEGIN
         END
         POPUP "去噪",                           65535,MFT_STRING,MFS_ENABLED
         BEGIN
-            MENUITEM "中值滤波",                    32794,MFT_STRING,
+            MENUITEM "中值滤波",                    MEDIANFILTER,MFT_STRING,
+            MFS_ENABLED
+            MENUITEM "中值滤波7",                   MEDIANFILTER7,MFT_STRING,
             MFS_ENABLED
         END
         POPUP "锐化,",                          65535,MFT_STRING,MFS_ENABLED
@@ -201,6 +215,8 @@ BEGIN
             MENUITEM "拉普拉斯算子(1)",             32795,MFT_STRING,
             MFS_ENABLED
             MENUITEM "拉普拉斯算子(-1)",            32796,MFT_STRING,
+            MFS_ENABLED
+            MENUITEM "Sobel",                       SOBELOPERATOR,MFT_STRING,
             MFS_ENABLED
         END
     END

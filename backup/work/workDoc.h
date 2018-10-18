@@ -61,11 +61,15 @@ public:
 	void ResizeImage(double proportion);
 	void ResizeImage();
 	void DepartChannel(char color);
+	void DepartChannelHISH();
+	void DepartChannelHISI();
+	void DepartChannelHISS();
 	void HistogramEquilibrium();
 	void ImageSmoothing(int size);
 	bool Fusion(double param);
 	void RectangleMedianFilter(int size);
 	void LaplasseOperator(int factor, int mould[]);
+	void SobelOperator(); 
 	void SegmentalProvessOperator(int first_x, int first_y, int secondx, int secondy);
 
 //	calculate data function
@@ -105,6 +109,13 @@ protected:
 	afx_msg void OnLaplasseOparator();
 	afx_msg void OnLaplasseOparatorNagetive();
 	afx_msg void OnSegmentalProvess1();
+	afx_msg void OnAverageFiltering7();
+	afx_msg void SmoothFiltering7();
+	afx_msg void OnMedianFilter7();
+	afx_msg void OnSobelOperator();
+	afx_msg void OnHISH();
+	afx_msg void OnHISI();
+	afx_msg void OnHISS();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 

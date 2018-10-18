@@ -32,7 +32,7 @@ Type=0
 HeaderFile=workDoc.h
 ImplementationFile=workDoc.cpp
 Filter=N
-LastObject=CWorkDoc
+LastObject=HIS_S
 BaseClass=CDocument
 VirtualFilter=DC
 
@@ -49,7 +49,7 @@ Type=0
 HeaderFile=MainFrm.h
 ImplementationFile=MainFrm.cpp
 Filter=T
-LastObject=SEFMENTALPROVESS1
+LastObject=HIS_H
 BaseClass=CFrameWnd
 VirtualFilter=fWC
 
@@ -75,8 +75,16 @@ Control4=IDOK,button,1342373889
 [MNU:IDR_MAINFRAME]
 Type=1
 Class=CMainFrame
-Command1=SEFMENTALPROVESS1
-CommandCount=1
+Command1=HIS_H
+Command2=HIS_I
+Command3=HIS_S
+Command4=AVERAGERFILTERING3
+Command5=AVERAGEFILTERING7
+Command6=SEFMENTALPROVESS1
+Command7=MEDIANFILTER
+Command8=MEDIANFILTER7
+Command9=SOBELOPERATOR
+CommandCount=9
 
 [ACL:IDR_MAINFRAME]
 Type=1

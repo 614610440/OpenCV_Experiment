@@ -66,11 +66,19 @@ public:
 	bool Fusion(double param);
 	void RectangleMedianFilter(int size);
 	void LaplasseOperator(int factor, int mould[]);
+	void LaplasseOperatorBoard(int factor, int mould[]);
 	void SegmentalProvessOperator(int first_x, int first_y, int secondx, int secondy);
+	void DepartHSII();
+	void DepartHSIS();
+	void DepartHSIH();
+	void AddGaussianNoise(double mu, double sigma, int k); 
+	void AddSaltpeperNoise(double SNR);
 
 //	calculate data function
 
 	int Median(int *P, int size);
+	int Min(int r, int g, int b);
+	double GenerateGaussianNoise(double mu, double sigma);
 	//void LaplasseTemplateA();
 
 #ifdef _DEBUG
@@ -105,6 +113,17 @@ protected:
 	afx_msg void OnLaplasseOparator();
 	afx_msg void OnLaplasseOparatorNagetive();
 	afx_msg void OnSegmentalProvess1();
+	afx_msg void OnHSII();
+	afx_msg void OnHSIS();
+	afx_msg void OnHSIH();
+	afx_msg void OnSobel1();
+	afx_msg void OnSobel2();
+	afx_msg void OnLaplaceBoard1();
+	afx_msg void OnLaplaceBoard2();
+	afx_msg void OnSobelBoard1();
+	afx_msg void OnSobelBoard2();
+	afx_msg void OnGaussianNoise();
+	afx_msg void OnSaltPepperNoise();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 

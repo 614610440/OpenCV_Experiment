@@ -5,6 +5,7 @@
 #include "work.h"
 
 #include <iostream>
+#include <math.h>
 
 #include "workDoc.h"
 
@@ -41,6 +42,17 @@ BEGIN_MESSAGE_MAP(CWorkDoc, CDocument)
 	ON_COMMAND(LAPLASEEOPRATOR, OnLaplasseOparator)
 	ON_COMMAND(ID_MENUITEM32796, OnLaplasseOparatorNagetive)
 	ON_COMMAND(SEFMENTALPROVESS1, OnSegmentalProvess1)
+	ON_COMMAND(HSI_I, OnHSII)
+	ON_COMMAND(HSI_S, OnHSIS)
+	ON_COMMAND(HIS_H, OnHSIH)
+	ON_COMMAND(SOBEL1, OnSobel1)
+	ON_COMMAND(SOBEL2, OnSobel2)
+	ON_COMMAND(LAPLACE_BOARD1, OnLaplaceBoard1)
+	ON_COMMAND(LAPLACE_BOARD2, OnLaplaceBoard2)
+	ON_COMMAND(SOBEL_BOARD1, OnSobelBoard1)
+	ON_COMMAND(SOBEL_BOARD2, OnSobelBoard2)
+	ON_COMMAND(GAUSSIANNOISE, OnGaussianNoise)
+	ON_COMMAND(SALTPEPPERNOISE, OnSaltPepperNoise)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -577,15 +589,15 @@ void CWorkDoc::RectangleMedianFilter(int size)
 					else if(w>inputRGBImg->width-1) w0 = inputRGBImg->width-1;
 					else w0 = w;
 
-					R[sit] = data2[h0 * wp + 3 * w0];
+					B[sit] = data2[h0 * wp + 3 * w0];
 					G[sit] = data2[h0 * wp + 3 * w0 + 1];
-					B[sit] = data2[h0 * wp + 3 * w0 + 2];
+					R[sit] = data2[h0 * wp + 3 * w0 + 2];
 					sit++;
 				}
 			}
-			data[i * wp + 3 * j] = Median(R, size*size);
+			data[i * wp + 3 * j] = Median(B, size*size);
 			data[i * wp + 3 * j + 1] = Median(G, size*size);
-			data[i * wp + 3 * j + 2] = Median(B, size*size);
+			data[i * wp + 3 * j + 2] = Median(R, size*size);
 
 			free(R);
 			free(G);
@@ -611,6 +623,26 @@ void CWorkDoc::OnLaplasseOparatorNagetive()
 	LaplasseOperator(-1, mould);
 
 	reDraw();
+}
+
+void CWorkDoc::OnSobel1() 
+{
+	int mould[] = {1,  2, 1,
+				   0,  0, 0,
+				   -1, -2, -1};
+	LaplasseOperator(1, mould);
+
+	reDraw();
+}
+
+void CWorkDoc::OnSobel2() 
+{
+	int mould[] = {1,  0, -1,
+				   2,  0, -2,
+				   1,  0, -1};
+	LaplasseOperator(1, mould);
+
+	reDraw();	
 }
 
 void  CWorkDoc::LaplasseOperator(int factor, int mould[])
@@ -686,14 +718,6 @@ void  CWorkDoc::LaplasseOperator(int factor, int mould[])
 				R += mould[k] * data2[y_sit * wp + 3 * x_sit + 2];
 			}
 
-			// b = data[i * wp + 3 * j] + factor*(B - 4*data[i * wp + 3 * j]);
-			// g = data[i * wp + 3 * j + 1] + factor*(G - 4*data[i * wp + 3 * j + 1]);
-			// r = data[i * wp + 3 * j + 2] + factor*(R - 4*data[i * wp + 3 * j + 2]);
-
-//			B = B<0 ? -B:B;
-	//		G = G<0 ? -G:G;
-		//	R = R<0 ? -R:R;
-
 			b = data[i * wp + 3 * j] 	 + factor * B;
 			g = data[i * wp + 3 * j + 1] + factor * G;
 			r = data[i * wp + 3 * j + 2] + factor * R; 
@@ -707,18 +731,143 @@ void  CWorkDoc::LaplasseOperator(int factor, int mould[])
 			if(r<0) r=0;
 			else if(r>255) r=255;
 
-	//		b = b>255 ? 255:b;
-	//		g = g>255 ? 255:g;
-	//		r = r>255 ? 255:r;
+			data[i * wp + 3 * j] = b;
+			data[i * wp + 3 * j + 1] = g;
+			data[i * wp + 3 * j + 2] = r;
+		}
+	}
+}
+
+void CWorkDoc::OnLaplaceBoard1() 
+{
+	int mould[] = {0,  1, 0,
+				   1, -4, 1,
+				   0,  1, 0};
+	LaplasseOperatorBoard(1, mould);
+	reDraw();	
+}
+
+void CWorkDoc::OnLaplaceBoard2() 
+{
+	int mould[] = {0,  1, 0,
+				   1, -4, 1,
+				   0,  1, 0};
+	LaplasseOperatorBoard(-1, mould);
+	reDraw();	
+}
+
+void CWorkDoc::OnSobelBoard1() 
+{
+	int mould[] = {1,  2, 1,
+				   0,  0, 0,
+				   -1, -2, -1};
+	LaplasseOperatorBoard(1, mould);
+
+	reDraw();	
+}
+
+void CWorkDoc::OnSobelBoard2() 
+{
+	int mould[] = {1,  0, -1,
+				   2,  0, -2,
+				   1,  0, -1};
+	LaplasseOperatorBoard(1, mould);
+
+	reDraw();	
+}
+
+void  CWorkDoc::LaplasseOperatorBoard(int factor, int mould[])
+{
+	if(factor<0) factor = -1;
+	else factor = 1;
+
+	IplImage* inputRGBImg = m_img.GetImage();
+	uchar *data = (uchar *)inputRGBImg->imageData;
+
+	CvvImage cimg;
+
+    cimg.CopyOf(m_img);
+
+	IplImage* inputRGBImg2 = cimg.GetImage();
+	uchar *data2 = (uchar *)inputRGBImg2->imageData;
+
+	int  wp = inputRGBImg->widthStep;
+
+	for(int i = 0; i < inputRGBImg->height; i++)
+	{
+		for(int j = 0; j < inputRGBImg->width; j++)
+		{
+			int R = 0, G = 0, B = 0, r, g, b;
+			int x_sit, y_sit;
+
+			for(int k = 0; k<9; k++)
+			{
+				switch(k)
+				{
+				case 0:	
+					x_sit = j-1<0 ? 0:j-1;	// *00
+					y_sit = i-1<0 ? 0:i-1;	// 000
+					break;					// 000
+
+				case 1:						// 0*0
+					y_sit = i-1<0 ? 0:i-1;	// 000
+					x_sit = j;				// 000
+					break;
+
+				case 2:																// 00*
+					y_sit = i-1<0 ? 0:i-1;											// 000
+					x_sit = j+1>inputRGBImg->width-1 ? inputRGBImg->width-1:j+1;	// 000
+					break;
+
+				case 3:
+					x_sit = j-1<0 ? 0:j-1;											//  000
+					y_sit = i;														//  *00
+					break;															//  000
+
+				case 5:
+					x_sit = j+1>inputRGBImg->width-1 ? inputRGBImg->width-1:j+1;	//  000
+					y_sit = i;														//  00*
+					break;															//  000
+
+				case 6:	
+					x_sit = j-1<0 ? 0:j-1;											// 000
+					y_sit = i+1>inputRGBImg->height-1 ? inputRGBImg->height-1:i+1;	// 000
+					break;															// *00
+
+				case 7:																// 000
+					y_sit = i+1>inputRGBImg->height-1 ? inputRGBImg->height-1:i+1;	// 000
+					x_sit = j;														// 0*0
+					break;
+
+				case 8:																// 000
+					y_sit = i+1>inputRGBImg->height-1 ? inputRGBImg->height-1:i+1;	// 000
+					x_sit = j+1>inputRGBImg->width-1 ? inputRGBImg->width-1:j+1;	// 00*
+					break;
+				}
+				B += mould[k] * data2[y_sit * wp + 3 * x_sit];
+				G += mould[k] * data2[y_sit * wp + 3 * x_sit + 1];
+				R += mould[k] * data2[y_sit * wp + 3 * x_sit + 2];
+			}
+
+			b = factor * B;
+			g = factor * G;
+			r = factor * R; 
+
+			if(b<0) b=0;
+			else if(b>255) b=255;
+
+			if(g<0) g=0;
+			else if(g>255) g=255;
+
+			if(r<0) r=0;
+			else if(r>255) r=255;
 
 			data[i * wp + 3 * j] = b;
 			data[i * wp + 3 * j + 1] = g;
 			data[i * wp + 3 * j + 2] = r;
 		}
 	}
-
 }
-
 
 void CWorkDoc::OnSegmentalProvess1() 
 {
@@ -749,6 +898,182 @@ void CWorkDoc::SegmentalProvessOperator(int first_x, int first_y, int second_x, 
 		}
 	}
 }
+
+void CWorkDoc::OnHSII() 
+{
+	DepartHSII();
+	reDraw();
+}
+
+void CWorkDoc::OnHSIS() 
+{
+	DepartHSIS();
+	reDraw();
+}
+
+void CWorkDoc::OnHSIH() 
+{
+	DepartHSIH();
+	reDraw();	
+}
+
+
+void CWorkDoc::DepartHSII()
+{
+	IplImage* inputRGBImg = m_img.GetImage();
+	uchar *data = (uchar *)inputRGBImg->imageData;
+
+	int  wp = inputRGBImg->widthStep;
+
+	for(int i = 0; i < inputRGBImg->height; i++)
+	{
+		for(int j = 0; j < inputRGBImg->width; j++)
+		{
+			int b = data[i * wp + 3 * j];
+			int g = data[i * wp + 3 * j + 1];
+			int r = data[i * wp + 3 * j + 2];
+			int I = (r+g+b)/3;
+			data[i * wp + 3 * j] = I;
+			data[i * wp + 3 * j + 1] = I;
+			data[i * wp + 3 * j + 2] = I;
+		}
+	}
+}
+
+void CWorkDoc::DepartHSIS()
+{
+	IplImage* inputRGBImg = m_img.GetImage();
+	uchar *data = (uchar *)inputRGBImg->imageData;
+
+	int  wp = inputRGBImg->widthStep;
+
+	for(int i = 0; i < inputRGBImg->height; i++)
+	{
+		for(int j = 0; j < inputRGBImg->width; j++)
+		{
+			int b = data[i * wp + 3 * j];
+			int g = data[i * wp + 3 * j + 1];
+			int r = data[i * wp + 3 * j + 2];
+			double S = 1 - 3.0/(r+g+b)*Min(r, g, b);
+			data[i * wp + 3 * j] = S * 255;
+			data[i * wp + 3 * j + 1] = S * 255;
+			data[i * wp + 3 * j + 2] = S * 255;
+		}
+	}
+}
+
+void CWorkDoc::DepartHSIH()
+{
+	IplImage* inputRGBImg = m_img.GetImage();
+	uchar *data = (uchar *)inputRGBImg->imageData;
+
+	int  wp = inputRGBImg->widthStep;
+
+	for(int i = 0; i < inputRGBImg->height; i++)
+	{
+		for(int j = 0; j < inputRGBImg->width; j++)
+		{
+			int b = data[i * wp + 3 * j];
+			int g = data[i * wp + 3 * j + 1];
+			int r = data[i * wp + 3 * j + 2];
+			double nume = 0.5*(2*r-g-b);
+			double deno = sqrt((r-g)*(2.0*r-g-b));
+			double TH = acos(nume/deno);
+			int H = b<=g ? TH:360-TH; 
+			data[i * wp + 3 * j] = H;
+			data[i * wp + 3 * j + 1] = H;
+			data[i * wp + 3 * j + 2] = H;
+		}
+	}
+}
+
+void CWorkDoc::OnGaussianNoise() 
+{
+	AddGaussianNoise(0, 1.0, 64);
+	reDraw();		
+}
+
+
+void CWorkDoc::AddGaussianNoise(double mu, double sigma, int k)
+{
+	IplImage* inputRGBImg = m_img.GetImage();
+	uchar *data = (uchar *)inputRGBImg->imageData;
+
+	int  wp = inputRGBImg->widthStep;
+
+	for(int i = 0; i < inputRGBImg->height; i++)
+	{
+		for(int j = 0; j < inputRGBImg->width; j++)
+		{
+			int b = data[i * wp + 3 * j];
+			int g = data[i * wp + 3 * j + 1];
+			int r = data[i * wp + 3 * j + 2];
+			double temp = k*GenerateGaussianNoise(mu, sigma);
+
+			int R = r + temp;
+			int G = g + temp;
+			int B = b + temp;
+
+			if(R > 255)
+				R = 255;
+			else if(R < 0)
+				R = 0;
+
+			if(G > 255)
+				G = 255;
+			else if(G < 0)
+				G = 0;
+
+			if(B > 255)
+				B = 255;
+			else if(B < 0)
+				B = 0;
+
+			data[i * wp + 3 * j] = B;
+			data[i * wp + 3 * j + 1] = G;
+			data[i * wp + 3 * j + 2] = R;
+		}
+	}	
+}
+
+void CWorkDoc::OnSaltPepperNoise() 
+{
+	AddSaltpeperNoise(0.8);
+	reDraw();
+}
+
+
+void CWorkDoc::AddSaltpeperNoise(double SNR)
+{
+	IplImage* inputRGBImg = m_img.GetImage();
+	uchar *data = (uchar *)inputRGBImg->imageData;
+
+	int  wp = inputRGBImg->widthStep;
+
+	int SP = inputRGBImg->height*inputRGBImg->width;
+	int NP = SP*(1-SNR);
+
+	for(int i = 0; i < NP; i++)
+	{
+		int X = (int)(rand()*1.0/RAND_MAX*inputRGBImg->width);
+		int Y = (int)(rand()*1.0/RAND_MAX*inputRGBImg->height);
+		int r = rand()%2;
+
+		if(r)
+		{
+			data[Y * wp + 3 * X] = 0;
+			data[Y * wp + 3 * X + 1] = 0;
+			data[Y * wp + 3 * X + 2] = 0;
+		}
+		else
+		{
+			data[Y * wp + 3 * X] = 255;
+			data[Y * wp + 3 * X + 1] = 255;
+			data[Y * wp + 3 * X + 2] = 255;
+		}
+	}
+}
+
 //	calculate data function
 
 int CWorkDoc::Median(int *p, int size)
@@ -772,4 +1097,43 @@ int CWorkDoc::Median(int *p, int size)
 	}
 
 	return p[size/2];
+}
+
+int CWorkDoc::Min(int r, int g, int b)
+{
+	int result = r<g ? r:g;
+
+	result = result<b ? result:b;
+
+	return result;
+}
+
+
+double CWorkDoc::GenerateGaussianNoise(double mu, double sigma)
+{
+	static double V1, V2, S;
+	static int phase = 0;
+	double X;
+	double U1, U2;
+
+	if(phase == 0)
+	{
+		do{
+			U1 = (double)rand() / RAND_MAX;
+			U2 = (double)rand() / RAND_MAX;
+
+			V1 = 2 * U1 - 1;
+			V2 = 2 * U2 -1;
+			S = V1 * V1 + V2 * V2;
+		}while(S>=1 || S==0);
+
+		X = V1 * sqrt(-2 * log(S) / S);
+	}
+	else
+	{
+		X = V2 * sqrt(-2 * log(S) / S);
+	}
+
+	phase = 1 - phase;
+	return mu+sigma*X;
 }

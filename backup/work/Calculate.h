@@ -17,6 +17,7 @@ public:
 
 	void SetSegmentalPoint(int p_x, int p_y, int a_x, int a_y);
 	int GetSegmentalProvess(int value);
+	void GetSegmentalProvess(int &b, int &g, int &r);
 
 private:
 	struct SegmentPoint

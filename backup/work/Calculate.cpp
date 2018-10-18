@@ -53,6 +53,34 @@ int CCalculate::GetSegmentalProvess(int value) // 0~255
     return result;
 }
 
+void CCalculate::GetSegmentalProvess(int &b, int &g, int &r) // 0~255
+{
+	int value = (b + g + r)/3;
+	if(!(b & g & r))
+		return;
+    int result;
+    if(value<=segment_point_.first_x_)
+        result = value * segment_point_.first_y_ / segment_point_.first_x_;
+    else if(value<=segment_point_.second_x_)
+        result = segment_point_.first_y_ + 
+                (segment_point_.second_y_ - segment_point_.first_y_) /
+                (segment_point_.second_x_ - segment_point_.first_x_) *
+                (value - segment_point_.first_x_);
+    else
+        result = segment_point_.second_y_ + 
+                (255 - segment_point_.second_y_) /
+                (255 - segment_point_.second_x_) *
+                (value - segment_point_.second_x_);
+
+    b = b * result / value;
+	g = g * result / value;
+	r = r * result / value;
+
+	b = b>255 ? 255:b;
+	g = g>255 ? 255:g;
+	r = r>255 ? 255:r;
+}
+
 // void CWorkDoc::OnSegmentalProvesssOparator(int first_x, int first_y, int second_x, int second_y)
 // {
 	// CCalculate calcul;

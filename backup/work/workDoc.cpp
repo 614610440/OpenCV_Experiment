@@ -41,6 +41,12 @@ BEGIN_MESSAGE_MAP(CWorkDoc, CDocument)
 	ON_COMMAND(LAPLASEEOPRATOR, OnLaplasseOparator)
 	ON_COMMAND(ID_MENUITEM32796, OnLaplasseOparatorNagetive)
 	ON_COMMAND(SEFMENTALPROVESS1, OnSegmentalProvess1)
+	ON_COMMAND(AVERAGEFILTERING7, SmoothFiltering7)
+	ON_COMMAND(MEDIANFILTER7, OnMedianFilter7)
+	ON_COMMAND(SOBELOPERATOR, OnSobelOperator)
+	ON_COMMAND(HIS_H, OnHISH)
+	ON_COMMAND(HIS_I, OnHISI)
+	ON_COMMAND(HIS_S, OnHISS)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -295,9 +301,17 @@ void CWorkDoc::ResizeImage()
 
 void CWorkDoc::SmoothFiltering() 
 {
-	ImageSmoothing(9);
+	ImageSmoothing(3);
 	reDraw();
 }
+
+void CWorkDoc::SmoothFiltering7() 
+{
+	// TODO: Add your command handler code here
+	ImageSmoothing(7);
+	reDraw();	
+}
+
 
 void CWorkDoc::ImageSmoothing(int size)
 {
@@ -540,6 +554,13 @@ void CWorkDoc::OnMedianFilter()
 	reDraw();
 }
 
+void CWorkDoc::OnMedianFilter7() 
+{
+	// TODO: Add your command handler code here
+	RectangleMedianFilter(7);
+	reDraw();	
+}
+
 void CWorkDoc::RectangleMedianFilter(int size)
 {
 	IplImage* inputRGBImg = m_img.GetImage();
@@ -686,14 +707,6 @@ void  CWorkDoc::LaplasseOperator(int factor, int mould[])
 				R += mould[k] * data2[y_sit * wp + 3 * x_sit + 2];
 			}
 
-			// b = data[i * wp + 3 * j] + factor*(B - 4*data[i * wp + 3 * j]);
-			// g = data[i * wp + 3 * j + 1] + factor*(G - 4*data[i * wp + 3 * j + 1]);
-			// r = data[i * wp + 3 * j + 2] + factor*(R - 4*data[i * wp + 3 * j + 2]);
-
-//			B = B<0 ? -B:B;
-	//		G = G<0 ? -G:G;
-		//	R = R<0 ? -R:R;
-
 			b = data[i * wp + 3 * j] 	 + factor * B;
 			g = data[i * wp + 3 * j + 1] + factor * G;
 			r = data[i * wp + 3 * j + 2] + factor * R; 
@@ -707,10 +720,6 @@ void  CWorkDoc::LaplasseOperator(int factor, int mould[])
 			if(r<0) r=0;
 			else if(r>255) r=255;
 
-	//		b = b>255 ? 255:b;
-	//		g = g>255 ? 255:g;
-	//		r = r>255 ? 255:r;
-
 			data[i * wp + 3 * j] = b;
 			data[i * wp + 3 * j + 1] = g;
 			data[i * wp + 3 * j + 2] = r;
@@ -719,6 +728,12 @@ void  CWorkDoc::LaplasseOperator(int factor, int mould[])
 
 }
 
+
+void CWorkDoc::OnSobelOperator() 
+{
+	// TODO: Add your command handler code here
+	
+}
 
 void CWorkDoc::OnSegmentalProvess1() 
 {
@@ -743,12 +758,47 @@ void CWorkDoc::SegmentalProvessOperator(int first_x, int first_y, int second_x, 
 			int b = data[i * wp + 3 * j];
 			int g = data[i * wp + 3 * j + 1];
 			int r = data[i * wp + 3 * j + 2];
-			data[i * wp + 3 * j] = calcul.GetSegmentalProvess(b);
-			data[i * wp + 3 * j + 1] = calcul.GetSegmentalProvess(g);
-			data[i * wp + 3 * j + 2] = calcul.GetSegmentalProvess(r);
+			calcul.GetSegmentalProvess(b, g, r);
+			data[i * wp + 3 * j] = b;
+			data[i * wp + 3 * j + 1] = g;
+			data[i * wp + 3 * j + 2] = r;
 		}
 	}
 }
+
+void CWorkDoc::OnHISH() 
+{
+	// TODO: Add your command handler code here
+	
+}
+
+void CWorkDoc::OnHISI() 
+{
+	// TODO: Add your command handler code here
+	
+}
+
+void CWorkDoc::OnHISS() 
+{
+	// TODO: Add your command handler code here
+	
+}
+
+void CWorkDoc::DepartChannelHISH()
+{
+
+}
+
+void CWorkDoc::DepartChannelHISI()
+{
+
+}
+
+void CWorkDoc::DepartChannelHISS()
+{
+
+}
+
 //	calculate data function
 
 int CWorkDoc::Median(int *p, int size)
